@@ -4,6 +4,7 @@ import com.jobseeker.dto.CreatePositionDto;
 import com.jobseeker.dto.PositionOutputDto;
 import com.jobseeker.service.PositionService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,7 +30,7 @@ public class PositionController {
     private final PositionService positionService;
 
     @PostMapping
-    public String createPosition(@RequestBody @Valid CreatePositionDto createPositionDto,
+    public String createPosition(@RequestBody @Valid CreatePositionDto createPositionDto, Errors errors,
                                  @RequestHeader("Api-Key") UUID apiKey) {
         return positionService.createPosition(createPositionDto, apiKey);
     }
