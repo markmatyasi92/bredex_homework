@@ -13,11 +13,6 @@ public class ResponseDto {
     private List<ErrorDto> additionalErrors;
     private List<ErrorDto> additionalWarnings;
 
-    public ResponseDto() {
-        this.additionalErrors = new ArrayList<>();
-        this.additionalWarnings  = new ArrayList<>();
-    }
-
     public ResponseDto(ErrorDto error) {
         this.error = error;
         this.additionalErrors = new ArrayList<>();
