@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: jobseeker-be
+  profiles:
+    active: local
+  flyway:
+    user: admin
+    password: password
+    url: jdbc:h2:mem:jobseeker_db
+    baseline-on-migrate: true
+  datasource:
+    url: jdbc:h2:mem:jobseeker_db
+    driverClassName: org.h2.Driver
+    sql-script-encoding: UTF-8
+    username: admin
+    password: password
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      ddl-auto: validate
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false

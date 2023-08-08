@@ -1,0 +1,2 @@
+CREATE SEQUENCE client_sequence_generator START WITH 100 INCREMENT BY 1;
+CREATE SEQUENCE position_sequence_generator START WITH 100 INCREMENT BY 1;
